@@ -2,8 +2,8 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 
 // タッチしたら、回転する
-pudlic class OnmouseDownRotate : MonoBehaviour
+public class OnMouseDownRotate : MonoBehaviour
 {
-    
-    public float angle =360; //角度
+
+    public float angle = 360; //角度
 }
