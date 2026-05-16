@@ -130,7 +130,6 @@ GameObject:
   - component: {fileID: 17790051}
   - component: {fileID: 17790050}
   - component: {fileID: 17790049}
-  - component: {fileID: 17790048}
   m_Layer: 0
   m_Name: flower_2_0
   m_TagString: Untagged
@@ -138,19 +137,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &17790048
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 17790047}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 499333cd4c88b574e92f5d74c9bf6f23, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::OnMouseDownRotate
-  angle: 360
 --- !u!58 &17790049
 CircleCollider2D:
   m_ObjectHideFlags: 0

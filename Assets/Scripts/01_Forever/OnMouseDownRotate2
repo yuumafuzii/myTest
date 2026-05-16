@@ -6,4 +6,27 @@ public class OnMouseDownRotate : MonoBehaviour
 {
 
     public float angle = 360; //角度
+
+    private float rotateAngle = 0;
+
+    void Update()
+    {
+        //タッチしたら
+        if (OnMouseDownRotate.current?.leftButton.wasPressedThisFrame == true)
+        {
+            var ray = Camera.main.ScreenPointToRay(Mouse.current.position.ReadValue());
+            var hit = Physics2D.GetRayIntersection(ray, 100f, 1 << gameObject.layer);
+            if (hit.coolider && hit.collider.gameObject == gameObject.layer())
+                rotateAngle = angle;//押した瞬間　回転開始
+        }
+        // タッチをやめたら
+        if (Mouse.current?.leftButton.wasReleasedThisFrame == true)
+        {
+            rotateAngle = 0; //離した瞬間　停止
+        }
+    }
+    void FixedUpdate()
+    {
+        Transform.Rotate(0, 0, rotateAngle * Time.deltaTime);//回転する
+    }
 }
