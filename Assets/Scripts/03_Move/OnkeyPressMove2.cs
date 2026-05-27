@@ -15,6 +15,22 @@ public class OnKeyPressMove2 : MonoBehaviour
 
     void Awake()
     {
+        rbody = GetComponent<Rigidbody2D>();
+        sr = GetComponent<SpriteRenderer>();
+        rbody.constraints = 0;
+        // 回転しないようにする
+        rbody.constraints = RigidbodyConstraints2D.FreezeRotation;
+    }
 
+    public void OnMobe(InputValue value)
+    {
+        // 移動方向にキャラを向ける
+        if (moveInput.x != 0) sr.flipX = moveInput.x < 0;
+    }
+
+    void FixedUpdate()
+    {
+        // 物理的に勢い重視で移動（速度を与えて移動）
+        rbody.linearVelocity = moveInput * speed;
     }
 }
