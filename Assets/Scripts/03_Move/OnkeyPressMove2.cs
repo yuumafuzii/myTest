@@ -17,12 +17,12 @@ public class OnKeyPressMove2 : MonoBehaviour
     {
         rbody = GetComponent<Rigidbody2D>();
         sr = GetComponent<SpriteRenderer>();
-        rbody.constraints = 0;
+        rbody.gravityScale = 0;
         // 回転しないようにする
         rbody.constraints = RigidbodyConstraints2D.FreezeRotation;
     }
 
-    public void OnMobe(InputValue value)
+    public void OnMove(InputValue value)
     {
         // 移動方向にキャラを向ける
         if (moveInput.x != 0) sr.flipX = moveInput.x < 0;

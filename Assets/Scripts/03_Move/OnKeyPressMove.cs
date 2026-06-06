@@ -1,14 +1,14 @@
-﻿using UnityEngine;
+using UnityEngine;
 using UnityEngine.InputSystem;
 
 [RequireComponent(typeof(PlayerInput))]
 
 // キーを押すと、移動する 
-public class OnKeyPressMove : MonoBehaviour 
+public class OnKeyPressMove : MonoBehaviour
 {
-	//-------------------------------------
-	public float speed = 5f; //［速度］
-	//-------------------------------------
+    //-------------------------------------
+    public float speed = 5f; //［速度］
+                             //-------------------------------------
     private Vector2 moveInput;
     private Rigidbody2D rbody;
     private SpriteRenderer sr;
@@ -24,7 +24,6 @@ public class OnKeyPressMove : MonoBehaviour
 
     public void OnMove(InputValue value)
     {
-        moveInput = value.Get<Vector2>();
         // 移動方向にキャラを向ける
         if (moveInput.x != 0) sr.flipX = moveInput.x < 0;
     }
