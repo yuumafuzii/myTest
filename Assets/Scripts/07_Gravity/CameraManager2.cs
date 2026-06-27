@@ -27,7 +27,8 @@ public class CameraManager2 : MonoBehaviour
         else
         {
             desiredPos = new Vector3(vx, PlayerPos.y + offset.y, vz);
-            desiredPos = new Vector3(vx,)
+            desiredPos = new Vector3(vx, PlayerPos.y + offset.y, vz);
         }
+
     }
 }
