@@ -29,6 +29,15 @@ public class CameraManager2 : MonoBehaviour
             desiredPos = new Vector3(vx, PlayerPos.y + offset.y, vz);
             desiredPos = new Vector3(vx, PlayerPos.y + offset.y, vz);
         }
-
+        if (smoothFollow)
+        {
+            Vector3 smoothedPos = Vector3.Lerp(transform.position,
+                        desiredPos, smoothSpeed * Time.deltaTime);
+            transform.position = smoothedPos;
+        }
+        else
+        {
+            transform.position = desiredPos;
+        }
     }
 }
