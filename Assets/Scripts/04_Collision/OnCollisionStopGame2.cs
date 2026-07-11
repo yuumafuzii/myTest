@@ -6,8 +6,8 @@ using UnityEngine;
 public class OnCollisionStopGame2 : MonoBehaviour
 {
 
-    public GameObject targetObject; //[]
-    public string tagName; //[]
+    public GameObject targetObject; //[目標オブジェクト]
+    public string tagName; //[タグ]
 
 
     void Start()
