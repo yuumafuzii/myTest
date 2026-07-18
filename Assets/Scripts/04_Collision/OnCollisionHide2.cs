@@ -11,7 +11,7 @@ public class OnCollisionHide2 : MonoBehaviour
     public GameObject hideObject; //[消すオブジェクト]
 
 
-    void Oter2D(Collision2D collision)
+    void OnCollisionEnter2D(Collision2D collision)
     {
         //衝突したものが、目標オブジェクト化、タグ名なら
         if (collision.gameObject == targetObject ||
