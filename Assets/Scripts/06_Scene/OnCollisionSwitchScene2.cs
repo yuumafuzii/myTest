@@ -12,7 +12,7 @@ public class OnCollisionSwitchScene2 : MonoBehaviour
     public string sceneName; //[シーン名]
 
 
-    void OonEnter2D(Collision2D collision) //衝突したとき
+    void OnCollisionEnter2D(Collision2D collision) //衝突したとき
     {
         //衝突したものが、目標オブジェクトか、タグ名なら
         if (collision.gameObject == targetObject ||

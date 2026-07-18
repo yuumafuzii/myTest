@@ -19,7 +19,7 @@ public class OnMouseDownCountChange2 : MonoBehaviour
             if (hit.collider && hit.collider.gameObject == gameObject)
             {
                 //カウンターの値を変更する
-                GameCounter.counters[kind] = GameCounter.counters[kind] + addValue;
+                GameCounter2.counters[kind] = GameCounter2.counters[kind] + addValue;
             }
         }
     }
